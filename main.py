@@ -4,7 +4,16 @@ from ScrolledText import *
 import tkFileDialog
 import tkMessageBox
 
+def select_all(event):
+    print "Going to select all"
+    event.widget.tag_add(SEL, "1.0", "end-1c")
+    event.widget.mark_set(INSERT, "1.0")
+    event.widget.see(INSERT)
+    return "break"
+
 root = Tkinter.Tk(className=" Textee")
+root.bind_class('Text', '<Control-a>', select_all)
+
 textPad = ScrolledText(root, width=100, height=50)
 
 def open_command():
@@ -31,7 +40,7 @@ def about_command():
 
 def do_nothing():
     print "Ok.."
-    
+
 menu = Menu(root)
 root.config(menu=menu)
 filemenu = Menu(menu)
