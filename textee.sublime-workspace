@@ -1,0 +1,1623 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"gr",
+				"groups"
+			],
+			[
+				"curr",
+				"current_user"
+			],
+			[
+				"ass",
+				"assigned_user_id  (variable)"
+			],
+			[
+				"assigned",
+				"assigned_user_id"
+			],
+			[
+				"con",
+				"contactIds  (variable)"
+			],
+			[
+				"cont",
+				"contracts"
+			],
+			[
+				"contra",
+				"contracts"
+			],
+			[
+				"contact",
+				"contact_addr"
+			],
+			[
+				"Inb",
+				"InboundEmail"
+			],
+			[
+				"AOS_",
+				"AOS_Contracts"
+			],
+			[
+				"pay",
+				"payment_process_state_c"
+			],
+			[
+				"payment",
+				"payment_process_state_list"
+			],
+			[
+				"AOS_Produc",
+				"AOS_Products_Quotes"
+			],
+			[
+				"AOS_P",
+				"AOS_Products_Quotes"
+			],
+			[
+				"foot",
+				"footer_cell5"
+			],
+			[
+				"footer",
+				"footer_cell4"
+			],
+			[
+				"foo",
+				"footer_cell3"
+			],
+			[
+				"related_module",
+				"related_module_data"
+			],
+			[
+				"related",
+				"related_module_data"
+			],
+			[
+				"select",
+				"select_fields"
+			],
+			[
+				"optional",
+				"optional_params"
+			],
+			[
+				"var_",
+				"var_dump"
+			],
+			[
+				"ext",
+				"extractInfoFromDataFormat"
+			],
+			[
+				"super",
+				"super_password"
+			],
+			[
+				"sup",
+				"super_password"
+			],
+			[
+				"order",
+				"order_by"
+			],
+			[
+				"update",
+				"update_setting"
+			],
+			[
+				"compo",
+				"components"
+			],
+			[
+				"add_loo",
+				"add_lookup_values"
+			],
+			[
+				"dele",
+				"delete_lookup_values  (function)"
+			],
+			[
+				"settingslook",
+				"settingslookupvalues_table"
+			],
+			[
+				"settingsloo",
+				"settingslookupvalueobject  (variable)"
+			],
+			[
+				"look",
+				"lookup_value"
+			],
+			[
+				"fie",
+				"field_name"
+			],
+			[
+				"setting",
+				"settingslookupvalue"
+			],
+			[
+				"$option",
+				"$option_sorting"
+			],
+			[
+				"child",
+				"children  (variable)"
+			],
+			[
+				"comp",
+				"componentobject"
+			],
+			[
+				"componentfield",
+				"componentfieldvalueobject"
+			],
+			[
+				"optiona",
+				"optional_params"
+			],
+			[
+				"field_i",
+				"field_info"
+			],
+			[
+				"$retur",
+				"$return_id"
+			],
+			[
+				"recor",
+				"record_value"
+			],
+			[
+				"com",
+				"componentfieldvalueclass"
+			],
+			[
+				"re",
+				"record"
+			],
+			[
+				"add",
+				"add"
+			],
+			[
+				"filter",
+				"filter_condition"
+			],
+			[
+				"$child_mo",
+				"$child_modules"
+			],
+			[
+				"$child",
+				"$child_modules_info"
+			],
+			[
+				"option",
+				"optional_params"
+			],
+			[
+				"page",
+				"page_fetch_limit"
+			],
+			[
+				"qu",
+				"query_result"
+			],
+			[
+				"search",
+				"search_condition"
+			],
+			[
+				"fe",
+				"fetch_limit"
+			],
+			[
+				"star",
+				"start_limit"
+			],
+			[
+				"limi",
+				"limit_condition"
+			],
+			[
+				"str_re",
+				"str_replace  (function)"
+			],
+			[
+				"strrep",
+				"str_ireplace  (function)"
+			],
+			[
+				"is_s",
+				"is_string"
+			],
+			[
+				"fieldnam",
+				"fieldnames_array"
+			],
+			[
+				"field",
+				"fieldnames_array  (variable)"
+			],
+			[
+				"get",
+				"get_lookup_values  (function)"
+			],
+			[
+				"ex",
+				"explode"
+			],
+			[
+				"$language",
+				"$languages_submitted"
+			],
+			[
+				"$lang",
+				"$languages_submitted"
+			],
+			[
+				"avai",
+				"availableLanguages"
+			],
+			[
+				"langu",
+				"language_keys"
+			],
+			[
+				"ena",
+				"enabled_languages"
+			],
+			[
+				"page_",
+				"page_fields_table  (variable)"
+			],
+			[
+				"initi",
+				"initialized"
+			],
+			[
+				"$duplicate",
+				"$duplicate_pages_fields"
+			],
+			[
+				"pa",
+				"pagesfieldsobject"
+			],
+			[
+				"defaul",
+				"default_language"
+			],
+			[
+				"defa",
+				"default_value"
+			],
+			[
+				"pop",
+				"populate_default_module_settings  (function)"
+			],
+			[
+				"def",
+				"default_settings"
+			],
+			[
+				"if",
+				"if_setting_exists"
+			],
+			[
+				"is_n",
+				"is_numeric"
+			],
+			[
+				"du",
+				"duplicate_module"
+			],
+			[
+				"inclu",
+				"include_in_summary"
+			],
+			[
+				"Active",
+				"ActiveRecord"
+			],
+			[
+				"initia",
+				"initialize"
+			],
+			[
+				"module",
+				"module_name"
+			],
+			[
+				"$mod",
+				"$module_name"
+			],
+			[
+				"transa",
+				"transaction_result"
+			],
+			[
+				"clean",
+				"cleanURL"
+			],
+			[
+				"strire",
+				"str_ireplace  (function)"
+			],
+			[
+				"is_num",
+				"is_numeric"
+			],
+			[
+				"optin",
+				"optional_params"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Textee.py",
+			"settings":
+			{
+				"buffer_size": 162,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "main.py",
+			"settings":
+			{
+				"buffer_size": 1627,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"selected_items":
+		[
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"svn:comm",
+				"SVN: Commit…"
+			],
+			[
+				"commit",
+				"SVN: Commit…"
+			],
+			[
+				"svn",
+				"SVN: Commit…"
+			],
+			[
+				"svn:add",
+				"SVN: (File) Add"
+			],
+			[
+				"status",
+				"SVN: Status"
+			],
+			[
+				"commi",
+				"SVN: Commit…"
+			],
+			[
+				"svn co",
+				"SVN: Commit…"
+			],
+			[
+				"svn:status",
+				"SVN: Status"
+			],
+			[
+				"svn:co",
+				"SVN: Commit…"
+			],
+			[
+				"svn:stat",
+				"SVN: Status"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"SVN",
+				"SVN: Info"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"forma",
+				"Format: Php"
+			],
+			[
+				"format",
+				"Format: Php"
+			],
+			[
+				"Package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 610.0
+	},
+	"console":
+	{
+		"height": 251.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/rajesh/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/SecurityGroups/AssignGroups.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/ACLActions/ACLAction.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/ACLRoles/ACLRole.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/SecurityGroups/SecurityGroup.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/InboundEmail/InboundEmail.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/include/OutboundEmail/OutboundEmail.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/Accounts/ShowDuplicates.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/include/SugarEmailAddress/SugarEmailAddress.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/custom/modules/Cases/logic_hooks.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/config.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/custom/include/language/fr_FR.lang.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/AOS_Products_Quotes/line_items.js",
+		"/Users/rajesh/www/aswat/harmonitel/crm/custom/Extension/application/Ext/Include/AdvancedOpenSales.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/custom/application/Ext/Include/modules.ext.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/AOS_Products_Quotes/metadata/SearchFields.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/AOS_Quotes/metadata/searchdefs.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/AOS_Products_Quotes/AOS_Products_Quotes_sugar.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/Roles/vardefs.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/Roles/DetailView.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/AOS_Products_Quotes/Menu.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/AOS_Products_Quotes/metadata/metafiles.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/AOS_Products/AOS_Products_sugar.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/AOS_Products_Quotes/metadata/searchdefs.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/Home/Menu.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/cache/modules/AOS_Products_Quotes/AOS_Products_Quotesvardefs.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/AOS_Contracts/language/en_us.lang.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/AOS_Contracts/language/fr_fr.lang.1.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/AOS_Contracts/language/fr_FR.lang.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/AOS_Contracts/metadata/editviewdefs.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/include/utils.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/custom/include/language/en_us.lang.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/custom/modules/AOS_Products_Quotes/language/en_us.lang.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/cache/jsLanguage/AOS_Contracts/en_us.js",
+		"/Users/rajesh/www/aswat/harmonitel/crm/cache/modules/AOS_Contracts/language/en_us.lang.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/custom/modules/AOS_Products_Quotes/Ext/Vardefs/vardefs.ext.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/vCard.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/AOS_Products_Quotes/AOS_Products_Quotes.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/AOS_Line_Item_Groups/AOS_Line_Item_Groups_sugar.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/AOS_Line_Item_Groups/AOS_Line_Item_Groups.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/campaign_tracker.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/custom/Extension/modules/Contacts/Ext/Vardefs/customGlobalSearchFields.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/config_override.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/custom/modules/Contacts/metadata/SearchFields.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/cache/modules/AOS_Products/DetailView.tpl",
+		"/Users/rajesh/www/aswat/commit/crm/20141120_changes.patch",
+		"/Users/rajesh/www/aswat/commit/crm/20141120_changes.diff",
+		"/Users/rajesh/www/aswat/harmonitel/crm/custom/modules/Users/login.tpl",
+		"/Users/rajesh/www/aswat/harmonitel/crm/themes/BlueTheme/css/style.css",
+		"/Users/rajesh/www/aswat/harmonitel/crm/.gitignore",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/AOS_Products_Quotes/AOS_Utils.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/Contacts/language/en_us.lang.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/data/BeanFactory.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/AOP_Case_Updates/util.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/EmailTemplates/EmailTemplate.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/data/SugarBean.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/modules/Administration/Administration.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/custom/modules/Contacts/Ext/Language/en_us.lang.ext.php",
+		"/Users/rajesh/www/aswat/harmonitel/crm/themes/BlueTheme/tpls/footer.tpl",
+		"/Volumes/laravel",
+		"/Users/rajesh/www/aswat/carrefour/api/application/config/config.php",
+		"/Users/rajesh/www/aswat/carrefour/api/application/config/routes.php",
+		"/Users/rajesh/www/aswat/carrefour/api/application/config/rest.php",
+		"/Users/rajesh/www/aswat/carrefour/api/application/custom/crm/sql/Cases/average_closed_cases.sql",
+		"/Users/rajesh/www/aswat/carrefour/api/application/libraries/Format.php",
+		"/Users/rajesh/www/aswat/carrefour/api/application/libraries/REST_Controller.php",
+		"/Users/rajesh/www/aswat/carrefour/api/docs/indexes.sql",
+		"/Users/rajesh/www/aswat/carrefour/api/application/config/constants.php",
+		"/Users/rajesh/www/aswat/carrefour/api/application/helpers/utilities_helper.php",
+		"/Users/rajesh/www/aswat/carrefour/api/application/custom/sql/crm/Cases/average_closing_time.sql",
+		"/Users/rajesh/www/aswat/carrefour/api/.htaccess",
+		"/Users/rajesh/www/aswat/commit/crm/include/database/MysqlManager.php",
+		"/Users/rajesh/www/aswat/commit/crm/install.log",
+		"/Users/rajesh/www/aswat/commit/crm/custom/modules/AOS_Contracts/logic_hooks.php",
+		"/Users/rajesh/www/aswat/commit/crm/.gitignore",
+		"/Users/rajesh/www/aswat/commit/crm/include/EditView/EditView.tpl",
+		"/Users/rajesh/www/aswat/commit/crm/aswat_log/sugarcrm.log",
+		"/Users/rajesh/www/aswat/commit/crm/sugarcrm.log",
+		"/Users/rajesh/www/aswat/commit/crm/config_override.php",
+		"/Users/rajesh/www/aswat/commit/crm/tools/phpmyadmin/doc/html/_sources/faq.txt",
+		"/Users/rajesh/www/aswat/commit/crm/tools/phpmyadmin/config/config.inc.php",
+		"/Users/rajesh/www/aswat/commit/crm/custom/include/social/facebook/facebook_sdk/tests/tests.php",
+		"/Users/rajesh/www/aswat/commit/crm/custom/modules/Contacts/prepare_data.php",
+		"/Users/rajesh/www/aswat/commit/crm/custom/modules/logic_hooks.php",
+		"/Users/rajesh/www/aswat/commit/crm/custom/modules/Cases/custom_validations.js",
+		"/Users/rajesh/www/aswat/commit/crm/cache/modules/AOS_Contracts/EditView.tpl",
+		"/Users/rajesh/www/aswat/commit/crm/cache/modules/AOS_Contracts/language/en_us.lang.php",
+		"/Users/rajesh/www/aswat/commit/crm/cache/smarty/templates_c/%%33^336^3364B57A%%EditView.tpl.php",
+		"/Users/rajesh/www/aswat/commit/crm/custom/Extension/modules/AOS_Contracts/Ext/Vardefs/sugarfield_claims_counter_c.php",
+		"/Users/rajesh/www/aswat/commit/crm/custom/modules/AOS_Contracts/Ext/Vardefs/vardefs.ext.php",
+		"/Users/rajesh/www/aswat/commit/crm/custom/modules/AOS_Contracts/language/en_us.lang.php",
+		"/Users/rajesh/www/aswat/commit/crm/custom/modules/Cases/language/en_us.lang.php",
+		"/Users/rajesh/www/aswat/commit/crm/custom/modules/Cases/Ext/Vardefs/vardefs.ext.php",
+		"/Users/rajesh/www/aswat/commit/crm/custom/Extension/modules/Cases/Ext/Vardefs/sugarfield_preliminary_eta_c.php",
+		"/Users/rajesh/www/aswat/commit/crm/custom/modules/Cases/metadata/editviewdefs.php",
+		"/Users/rajesh/www/aswat/commit/crm/custom/modules/Cases/metadata/quickcreatedefs.php",
+		"/Users/rajesh/www/aswat/commit/crm/custom/modules/Cases/Ext/Layoutdefs/layoutdefs.ext.php",
+		"/Users/rajesh/www/aswat/commit/crm/include/EditView/EditView.php",
+		"/Users/rajesh/www/aswat/carrefour/crm/include/EditView/EditView.tpl",
+		"/Users/rajesh/www/aswat/carrefour/crm/tools/Cases-Extensions/conditional-types.php",
+		"/Users/rajesh/www/aswat/carrefour/crm/custom/Extension/application/Ext/EntryPointRegistry/conditional-types-EntryPoint.php",
+		"/Users/rajesh/www/aswat/carrefour/crm/custom/include/MVC/Controller/entry_point_registry.php",
+		"/Users/rajesh/www/aswat/carrefour/crm/custom/modules/Cases/logic_hooks.php",
+		"/Users/rajesh/www/aswat/carrefour/crm/custom/modules/Cases/SocialMedia_LogicHook.php",
+		"/Users/rajesh/www/aswat/carrefour/crm/config.php",
+		"/Users/rajesh/www/aswat/carrefour/crm/include/MVC/Controller/entry_point_registry.php",
+		"/Users/rajesh/www/aswat/carrefour/crm/modules/jjwg_Maps/entry_point_registry.php",
+		"/Users/rajesh/www/aswat/carrefour/crm/custom/history/modules/Cases/metadata/e9dc90c3-b4c3-717f-af66-539f01690b44/editviewdefs.php_1403253201",
+		"/Users/rajesh/www/aswat/carrefour/crm/custom/modules/Cases/metadata/e9dc90c3-b4c3-717f-af66-539f01690b44/editviewdefs.php",
+		"/Users/rajesh/www/aswat/crm/modules/Employees/Employee.php",
+		"/Users/rajesh/www/aswat/crm/include/SugarEmailAddress/SugarEmailAddress.php",
+		"/Users/rajesh/www/aswat/crm/modules/Emails/Email.php",
+		"/Users/rajesh/www/aswat/crm/custom/modules/Emails/Compose.php",
+		"/Users/rajesh/www/aswat/crm/modules/Emails/Compose.php",
+		"/Users/rajesh/www/aswat/crm/custom/include/LogicHooks/Cases_list_view.php",
+		"/Users/rajesh/www/aswat/crm/custom/modules/logic_hooks.php",
+		"/Users/rajesh/www/ahead/cms-api/application/models/module/module.php",
+		"/Users/rajesh/www/ahead/cms-api/application/models/module/modulefield.php",
+		"/Users/rajesh/www/ahead/cms-api/application/models/module/modulefieldvalue.php",
+		"/Users/rajesh/www/ahead/cms-api/application/models/module/modulesettings.php",
+		"/Users/rajesh/www/ahead/cms-api/application/config/rest.php",
+		"/Users/rajesh/www/ahead/cms-api/application/controllers/welcome.php",
+		"/Users/rajesh/www/ahead/cms-api/application/models/super/cmsusers.php",
+		"/var/folders/yw/963lblfs5ns8hdqk5qnx4xp40000gn/T/sublime-svn-1409060742/SVN",
+		"/var/folders/yw/963lblfs5ns8hdqk5qnx4xp40000gn/T/sublime-svn-1409056696/SVN",
+		"/var/folders/yw/963lblfs5ns8hdqk5qnx4xp40000gn/T/sublime-svn-1409056650/SVN",
+		"/var/folders/yw/963lblfs5ns8hdqk5qnx4xp40000gn/T/sublime-svn-1409050663/SVN",
+		"/var/folders/yw/963lblfs5ns8hdqk5qnx4xp40000gn/T/sublime-svn-1409049393/SVN"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/rajesh/www/aswat/harmonitel/crm/modules/SecurityGroups",
+			"/Users/rajesh/www/aswat/harmonitel/crm/",
+			"/Users/rajesh/www/aswat/harmonitel/crm/custom",
+			"/Users/rajesh/www/aswat/harmonitel/crm",
+			"/Users/rajesh/www/aswat/harmonitel/crm/custom/modules",
+			"/Users/rajesh/www/aswat/harmonitel/crm/custom/modules/Contacts",
+			"/Users/rajesh/www/aswat/harmonitel/crm",
+			"/Users/rajesh/www/aswat/harmonitel/crm/themes",
+			"/Users/rajesh/www/aswat/commit/crm/",
+			"/Users/rajesh/www/aswat/commit/crm/tools",
+			"/Users/rajesh/www/aswat/commit/crm/modules",
+			"/Users/rajesh/www/aswat/commit/crm/",
+			"/Users/rajesh/www/aswat/commit/crm/custom",
+			"/Users/rajesh/www/aswat/commit/crm",
+			"/Users/rajesh/www/aswat/commit/crm/tools",
+			"/Users/rajesh/www/aswat/commit/crm/",
+			"/Users/rajesh/www/aswat/commit/crm/custom",
+			"/Users/rajesh/www/aswat/commit/crm",
+			"/Users/rajesh/www/aswat/carrefour/crm",
+			"/Users/rajesh/www/ahead/cms-api/application/controllers/super"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"EditB",
+			"payment",
+			"roles",
+			"current_user",
+			"Roles",
+			"getUserRoleNames",
+			"current_user",
+			"contacts",
+			"from_addr",
+			"this",
+			"function getRelatedId",
+			"Email",
+			"email",
+			"link",
+			"OutboundEmail",
+			"handleLinking",
+			"handleLink",
+			"handleLinking",
+			"relate",
+			"linkAccountAndCase",
+			"relate",
+			"get_li",
+			"Contact",
+			"completed",
+			"AOS_Prod",
+			"AOS_Products",
+			"AOS_Produts",
+			"module",
+			"ACL",
+			"checkAccess",
+			"quotes",
+			"product",
+			"line",
+			"Line",
+			"Lline",
+			"Produ",
+			"AOS_Products_Quotes",
+			"Subscription",
+			"payment_process_state_list",
+			"app_list_strings",
+			"payment",
+			"consol",
+			"payment",
+			"product_vat",
+			"select",
+			"selected",
+			"LBL_PAYMENT_PROCESS_STATE",
+			"module_sugar_grp1",
+			"PAY",
+			"LBL_VAT_AMT",
+			"payment_process_state",
+			"vat_hidden",
+			"vathidden",
+			"vat_hidden",
+			"product_vat",
+			"payment_process_state",
+			"ret",
+			"retr",
+			"curren",
+			"uni",
+			"birth",
+			"range",
+			"version",
+			"calculateTotal(",
+			"calculateTotal(\"lineItems\")",
+			"display_lines(",
+			"display_lines",
+			"tax_amount",
+			"panelContainer",
+			"total_amt",
+			"b1",
+			"style.dis",
+			"product_head",
+			"product_group",
+			"par",
+			"product_part_number",
+			"number",
+			"Consultations",
+			"LBL_HISTORY_SUBPANEL_TITLE",
+			"robin",
+			"LBL_DIRECT_REPORTS_SUBPANEL_TITLE",
+			"Direct Reports",
+			"Direct",
+			"Direct Report",
+			"install",
+			"3",
+			"language",
+			"loginBoxShadow",
+			"da4453",
+			"#30426a\nda4453",
+			"#30426a\n#da4453",
+			"#moduleList .sf-menu li a",
+			"font",
+			"border-radius",
+			"3b73af",
+			"dashboardTabList",
+			"index.php",
+			"Venturia",
+			"venturia",
+			"APC",
+			"cache",
+			"get_module_data",
+			"get_records",
+			"json",
+			"this->ci",
+			"allowe",
+			"close",
+			"progression",
+			"aos_contracts_cases_1aos_contracts_ida",
+			"aos_contracts_cases_1_c",
+			"mysql_error()",
+			"FATAL",
+			"mysql_pconnec",
+			"mysql_conn",
+			"mysql",
+			"mmit",
+			"commit",
+			"mysql_connect",
+			"error_reporting",
+			"commit",
+			"zone",
+			"time",
+			"commit",
+			"mysql_cconnect",
+			"mysql_pconnect",
+			"localhost",
+			"2206",
+			"localhost"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"30426a",
+			"#30426a",
+			"$this->ci->db",
+			".png')?>\"",
+			"img src=\"<?=image_data('images/",
+			"alt=\"\" style=\"display:block; border: none\"",
+			".png')?>\"",
+			"img src=\"<?=image_data('images/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Textee.py",
+					"settings":
+					{
+						"buffer_size": 162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								162,
+								162
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"function_name_status_row": -1,
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublime_auto_complete": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "main.py",
+					"settings":
+					{
+						"buffer_size": 1627,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								103,
+								0
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"function_name_status_row": 0,
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"/modules/modulebuilder/ext/language/ru_ru.lang.ext.php",
+				"custom/modules/ModuleBuilder/Ext/Language/ru_ru.lang.ext.php"
+			],
+			[
+				"line",
+				"modules/AOS_Products_Quotes/line_items.js"
+			],
+			[
+				"secur",
+				"modules/SecurityGroups/SecurityGroup.php"
+			],
+			[
+				"uti",
+				"include/utils.php"
+			],
+			[
+				"aclrole",
+				"modules/ACLRoles/ACLRole.php"
+			],
+			[
+				"inboundemail",
+				"modules/InboundEmail/InboundEmail.php"
+			],
+			[
+				"outbound",
+				"include/OutboundEmail/OutboundEmail.php"
+			],
+			[
+				"inbou",
+				"modules/InboundEmail/InboundEmail.php"
+			],
+			[
+				"sugaremailaddress",
+				"include/SugarEmailAddress/SugarEmailAddress.php"
+			],
+			[
+				"caseupdateshook",
+				"modules/AOP_Case_Updates/CaseUpdatesHook.php"
+			],
+			[
+				"contactlogic",
+				"custom/modules/Contacts/logic_hooks.php"
+			],
+			[
+				"config",
+				"config.php"
+			],
+			[
+				"caselogic_ho",
+				"custom/modules/Cases/logic_hooks.php"
+			],
+			[
+				"styl",
+				"themes/BlueTheme/css/style.css"
+			],
+			[
+				"contractsupdatehook",
+				"custom/modules/AOS_Contracts/ContractsUpdateHook.php"
+			],
+			[
+				"logic_ho",
+				"custom/modules/AOS_Contracts/logic_hooks.php"
+			],
+			[
+				"homemenu.php",
+				"modules/Home/Menu.php"
+			],
+			[
+				"config.",
+				"config.php"
+			],
+			[
+				"aos_utils",
+				"modules/AOS_Products_Quotes/AOS_Utils.php"
+			],
+			[
+				"modules/aop_case_updates/caseupdateshook.php",
+				"modules/AOP_Case_Updates/CaseUpdatesHook.php"
+			],
+			[
+				"config_ov",
+				"config_override.php"
+			],
+			[
+				"config_o",
+				"config_override.php"
+			],
+			[
+				".giti",
+				".gitignore"
+			],
+			[
+				"style.css",
+				"themes/BlueTheme/css/style.css"
+			],
+			[
+				"config_v",
+				"config_override.php"
+			],
+			[
+				"utili",
+				"application/helpers/utilities_helper.php"
+			],
+			[
+				"routes",
+				"application/config/routes.php"
+			],
+			[
+				"cons",
+				"application/config/constants.php"
+			],
+			[
+				"index",
+				"index.php"
+			],
+			[
+				"rest",
+				"application/libraries/REST_Controller.php"
+			],
+			[
+				"consta",
+				"application/config/constants.php"
+			],
+			[
+				"custom",
+				"application/models/crm/customquery.php"
+			],
+			[
+				"rest.",
+				"application/config/rest.php"
+			],
+			[
+				"sugar",
+				"application/models/crm/sugarmodule.php"
+			],
+			[
+				".htacc",
+				".htaccess"
+			],
+			[
+				"rest.php",
+				"application/config/rest.php"
+			],
+			[
+				"thread",
+				"operator/threadprocessor.php"
+			],
+			[
+				"sugarcrm",
+				"sugarcrm.log"
+			],
+			[
+				"logic",
+				"custom/modules/logic_hooks.php"
+			],
+			[
+				"logic_hoo",
+				"custom/modules/AOS_Contracts/logic_hooks.php"
+			],
+			[
+				"edit",
+				"include/EditView/EditView.php"
+			],
+			[
+				"config.php",
+				"config.php"
+			],
+			[
+				"social",
+				"custom/modules/Cases/SocialMedia_LogicHook.php"
+			],
+			[
+				"custom/include/mvc/controller/entry_point_registry.php",
+				"custom/include/MVC/Controller/entry_point_registry.php"
+			],
+			[
+				"logic_",
+				"custom/modules/Cases/logic_hooks.php"
+			],
+			[
+				"tools/cases-extensions/conditional-types.php",
+				"tools/Cases-Extensions/conditional-types.php"
+			],
+			[
+				"include/mvc/controller/entry_point_registry.php",
+				"custom/include/MVC/Controller/entry_point_registry.php"
+			],
+			[
+				"entry_point_registry.php",
+				"include/MVC/Controller/entry_point_registry.php"
+			],
+			[
+				"modules/cases/metadata/e9dc90c3-b4c3-717f-af66-539f01690b44/editviewdefs.php",
+				"custom/history/modules/Cases/metadata/e9dc90c3-b4c3-717f-af66-539f01690b44/editviewdefs.php_1403253201"
+			],
+			[
+				"onditional-types.js",
+				"tools/Cases-Extensions/conditional-types.js.php"
+			],
+			[
+				"application/ext/entrypointregistry/entry_point_registry.ext.php",
+				"custom/application/Ext/EntryPointRegistry/entry_point_registry.ext.php"
+			],
+			[
+				"email.p",
+				"modules/Emails/Email.php"
+			],
+			[
+				"employ",
+				"modules/Employees/Employee.php"
+			],
+			[
+				"compose",
+				"custom/modules/Emails/Compose.php"
+			],
+			[
+				"compos",
+				"modules/Emails/Compose.php"
+			],
+			[
+				"cases_list_view",
+				"custom/include/LogicHooks/Cases_list_view.php"
+			],
+			[
+				"auth",
+				"cms-api/application/controllers/super/auth.php"
+			],
+			[
+				"page",
+				"cms-api/application/models/super/page.php"
+			],
+			[
+				"page_contro",
+				"cms-api/application/controllers/admin/page_controller.php"
+			],
+			[
+				"snipp",
+				"cms-api/application/snippets/sql/super/create_module_setting.snippet"
+			],
+			[
+				"module_build",
+				"cms-api/application/controllers/super/module_builder.php"
+			],
+			[
+				"compo",
+				"cms-api/application/models/super/component.php"
+			],
+			[
+				"settings_",
+				"cms-api/application/controllers/super/settings_builder.php"
+			],
+			[
+				"module_contr",
+				"cms-api/application/controllers/admin/module_controller.php"
+			],
+			[
+				"settings_con",
+				"cms-api/application/controllers/admin/settings_controller.php"
+			],
+			[
+				"pages",
+				"cms-api/application/models/super/pages.php"
+			],
+			[
+				"components",
+				"cms-api/application/models/super/components.php"
+			],
+			[
+				"settings",
+				"cms-api/application/models/super/settings.php"
+			],
+			[
+				"rout",
+				"cms-api/application/config/routes.php"
+			],
+			[
+				"const",
+				"cms-api/application/config/constants.php"
+			],
+			[
+				"roues",
+				"cms-api/application/config/routes.php"
+			],
+			[
+				"active",
+				"application/libraries/Activerecord.php"
+			],
+			[
+				"acti",
+				"application/libraries/Activerecord.php"
+			],
+			[
+				"act",
+				"application/libraries/Activerecord.php"
+			],
+			[
+				"database.",
+				"application/config/database.php"
+			],
+			[
+				"page.php",
+				"application/models/super/page.php"
+			],
+			[
+				"page_",
+				"application/controllers/super/page_builder.php"
+			],
+			[
+				"compon",
+				"application/models/super/components.php"
+			],
+			[
+				"module_",
+				"application/controllers/super/module_builder.php"
+			],
+			[
+				"page.",
+				"application/models/super/page.php"
+			],
+			[
+				"page.p",
+				"application/models/super/page.php"
+			],
+			[
+				"snippet",
+				"application/snippets/classes/super/componentsetting.snippet"
+			],
+			[
+				"sql/snipp",
+				"application/snippets/sql/super/create_module_setting.snippet"
+			],
+			[
+				"conta",
+				"application/config/constants.php"
+			],
+			[
+				"route",
+				"application/config/routes.php"
+			],
+			[
+				"activere",
+				"application/libraries/Activerecord.php"
+			],
+			[
+				".ht",
+				".htaccess"
+			],
+			[
+				"super",
+				"application/controllers/api/super/super.php"
+			],
+			[
+				"exam",
+				"application/controllers/api/example.php"
+			],
+			[
+				"auto",
+				"application/config/autoload.php"
+			],
+			[
+				"input",
+				"system/core/Input.php"
+			],
+			[
+				"cms",
+				"application/libraries/CMSModule/CMSModuleBaseClass.php"
+			],
+			[
+				"res",
+				"application/libraries/REST_Controller.php"
+			],
+			[
+				"database",
+				"application/config/database.php"
+			],
+			[
+				"welcome",
+				"application/views/welcome_message.php"
+			],
+			[
+				"index.php",
+				"index.php"
+			],
+			[
+				"model",
+				"system/core/Model.php"
+			],
+			[
+				"util",
+				"application/helpers/utilities_helper.php"
+			],
+			[
+				"__mod",
+				"application/models/__MODULE_NAME/__MODULE_NAME.php"
+			],
+			[
+				"index.",
+				"index.php"
+			],
+			[
+				"config.p",
+				"application/config/config.php"
+			],
+			[
+				"todo",
+				"assets/js/todo.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/rajesh/www/ahead/kanaan/website/kanaan.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 320.0,
+	"status_bar_visible": true
+}
