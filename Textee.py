@@ -16,13 +16,14 @@ class Textee:
         self.create_menu(master)
         self.create_ui(master)
         self.set_bindings(master)
+        self.file = None
 
     def create_menu(self, master):
         self.menu = Menu(master)
         master.config(menu=self.menu)
         filemenu = Menu(self.menu)
         self.menu.add_cascade(label="File", menu=filemenu)
-        filemenu.add_command(label="New", command=do_nothing)
+        filemenu.add_command(label="New", command=self.new_file)
         filemenu.add_command(label="Open...", command=self.open_file)
         filemenu.add_command(label="Save", command=self.save_file)
         filemenu.add_separator()
@@ -37,20 +38,35 @@ class Textee:
 
     def set_bindings(self, master):
         master.bind_class('Text', '<Control-a>', select_all)
+        master.bind_class('Text', '<Control-s>', lambda event: self.save_file())
+        master.bind_class('Text', '<Control-o>', lambda event: self.open_file())
+        master.bind_class('Text', '<Control-n>', lambda event: self.new_file())
+
+    def new_file(self):
+        self.file = None
+        self.editor.delete('1.0', END+'-1c') # clear all the contents
 
     def open_file(self):
-        self.file = tkFileDialog.askopenfile(parent=self.master,mode='rb',title='Select a file')
-        if self.file != None:
-            contents = self.file.read()
+        self.file = tkFileDialog.askopenfilename(parent=self.master,title='Select a file')
+        if self.file != None and self.file != '':
+            self.editor.delete('1.0', END+'-1c') # clear all the contents
+            infile = open(self.file, 'r')
+            contents = infile.read()
             self.editor.insert('1.0',contents)
-            self.file.close()
+            infile.close()
 
     def save_file(self):
-        file = tkFileDialog.asksaveasfile(mode='w')
-        if file != None:
-            data = self.editor.get('1.0', END+'-1c')
-            file.write(data)
-            file.close()
+        data = self.editor.get('1.0', END+'-1c')
+
+        if self.file != None:
+            outfile = open(self.file, 'w')
+            outfile.write(data)
+            outfile.close()
+        else:
+            self.file = tkFileDialog.asksaveasfile(mode='w')
+            if self.file != None:
+                self.file.write(data)
+                self.file.close()
 
     def about(self, master):
         tkMessageBox.showinfo("About", "Textee - A stupid text editor")
