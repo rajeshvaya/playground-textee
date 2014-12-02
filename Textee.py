@@ -3,7 +3,7 @@
 import Tkinter
 from Tkinter import *
 from ScrolledText import *
-import tkFileDialog, tkMessageBox
+import tkFileDialog, tkMessageBox, tkSimpleDialog
 
 from bindings import *
 from utilities import *
@@ -41,6 +41,7 @@ class Textee:
         master.bind_class('Text', '<Control-s>', lambda event: self.save_file())
         master.bind_class('Text', '<Control-o>', lambda event: self.open_file())
         master.bind_class('Text', '<Control-n>', lambda event: self.new_file())
+        master.bind_class('Text', '<Control-g>', lambda event: self.goto_line())
 
     def new_file(self):
         self.file = None
@@ -67,6 +68,13 @@ class Textee:
             if self.file != None:
                 self.file.write(data)
                 self.file.close()
+
+    def goto_line(self):
+        lineno = tkSimpleDialog.askinteger('Textee', 'Goto line:')
+        if lineno > 0:
+            self.editor.mark_set(INSERT, lineno + 0.0) #convert to float
+            self.editor.see(INSERT)
+        self.editor.focus_set()
 
     def about(self, master):
         tkMessageBox.showinfo("About", "Textee - A stupid text editor")
