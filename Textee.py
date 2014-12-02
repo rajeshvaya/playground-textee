@@ -1,5 +1,6 @@
 #!/usr/bin/python
 ''' IMPORTS '''
+import pprint
 import Tkinter
 from Tkinter import *
 from ScrolledText import *
@@ -17,10 +18,12 @@ class Textee:
         self.create_ui(master)
         self.set_bindings(master)
         self.file = None
+        self.theme = 'light'
 
     def create_menu(self, master):
         self.menu = Menu(master)
         master.config(menu=self.menu)
+        
         filemenu = Menu(self.menu)
         self.menu.add_cascade(label="File", menu=filemenu)
         filemenu.add_command(label="New", command=self.new_file)
@@ -28,13 +31,21 @@ class Textee:
         filemenu.add_command(label="Save", command=self.save_file)
         filemenu.add_separator()
         filemenu.add_command(label="Exit", command=self.exit)
+
+        viewmenu = Menu(self.menu)
+        self.menu.add_cascade(label='View', menu=viewmenu)
+        viewmenu.add_command(label='Toggle theme', command=self.toggle_theme)
+        
         helpmenu = Menu(self.menu)
         self.menu.add_cascade(label="Help", menu=helpmenu)
         helpmenu.add_command(label="About", command=self.about)
 
     def create_ui(self, master):
         self.editor = ScrolledText(master, width=100, height=50)
+        self.editor.config(undo=True)
         self.editor.pack()
+        print_configs(self.editor)
+        
 
     def set_bindings(self, master):
         master.bind_class('Text', '<Control-a>', select_all)
@@ -75,6 +86,14 @@ class Textee:
             self.editor.mark_set(INSERT, lineno + 0.0) #convert to float
             self.editor.see(INSERT)
         self.editor.focus_set()
+
+    def toggle_theme(self):
+        if self.theme == 'light':
+            self.editor.config(bg='black', fg='white')
+            self.theme = 'dark'
+        else:
+            self.editor.config(bg='white', fg='black')
+            self.theme = 'light'
 
     def about(self, master):
         tkMessageBox.showinfo("About", "Textee - A stupid text editor")
