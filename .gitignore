@@ -1,4 +1,6 @@
+
 *.pyc
+!setup/dist/**/*.pyc
 *.sublime-project
 *.sublime-workspace
 setup/build

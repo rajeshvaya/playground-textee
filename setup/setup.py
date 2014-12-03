@@ -13,6 +13,7 @@ if PLATFORM == 'darwin':
 	import py2app
 	options = {'iconfile': ICON_MAC}
 	setup(
+        package_dir={'': '../src'},
 		app = [MAIN_SCRIPT],
 		data_files = [],
 		options = {'py2app': options},
