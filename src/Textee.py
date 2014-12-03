@@ -44,7 +44,7 @@ class Textee:
         self.editor = ScrolledText(master, width=100, height=50)
         self.editor.config(undo=True)
         self.editor.pack()
-        print_configs(self.editor)
+        #print_configs(self.editor)
         
 
     def set_bindings(self, master):
