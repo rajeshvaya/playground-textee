@@ -14,11 +14,11 @@ from utilities import *
 class Textee:
     def __init__(self, master):
         self.master = master
+        self.theme = 'dark' # the startup will always be opposite
         self.create_menu(master)
         self.create_ui(master)
         self.set_bindings(master)
         self.file = None
-        self.theme = 'light'
 
     def create_menu(self, master):
         self.menu = Menu(master)
@@ -35,16 +35,18 @@ class Textee:
         viewmenu = Menu(self.menu)
         self.menu.add_cascade(label='View', menu=viewmenu)
         viewmenu.add_command(label='Toggle theme', command=self.toggle_theme)
+        viewmenu.add_command(label='Toggle wrap', command=self.toggle_wrap)
         
         helpmenu = Menu(self.menu)
         self.menu.add_cascade(label="Help", menu=helpmenu)
         helpmenu.add_command(label="About", command=self.about)
 
     def create_ui(self, master):
-        self.editor = ScrolledText(master, width=100, height=50)
+        self.editor = ScrolledText(master, width=100, height=50, highlightthickness=0)
         self.editor.config(undo=True)
-        self.editor.pack()
-        #print_configs(self.editor)
+        self.editor.pack(fill=X, padx=0, pady=0)
+        self.toggle_theme()
+        print_configs(self.editor)
         
 
     def set_bindings(self, master):
@@ -89,11 +91,19 @@ class Textee:
 
     def toggle_theme(self):
         if self.theme == 'light':
-            self.editor.config(bg='black', fg='white', insertbackground='white')
+            self.editor.config(bg='black', fg='white', insertbackground='white',highlightcolor='black')
+            self.editor.frame.config(bg='black')
             self.theme = 'dark'
         else:
-            self.editor.config(bg='white', fg='black', insertbackground='black')
+            self.editor.config(bg='white', fg='black', insertbackground='black',highlightcolor='white')
+            self.editor.frame.config(bg='white')
             self.theme = 'light'
+
+    def toggle_wrap(self):
+        if self.editor.cget('wrap') != 'none':
+            self.editor.config(wrap='none')
+        else:
+            self.editor.config(wrap='word')
 
     def about(self, master):
         tkMessageBox.showinfo("About", "Textee - A stupid text editor")

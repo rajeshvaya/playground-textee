@@ -7,6 +7,17 @@ def _reset_sys_path():
 _reset_sys_path()
 
 
+def _update_path():
+    import os, sys
+    resources = os.environ['RESOURCEPATH']
+    sys.path.append(os.path.join(
+        resources, 'lib', 'python%d.%d'%(sys.version_info[:2]), 'lib-dynload'))
+    sys.path.append(os.path.join(
+        resources, 'lib', 'python%d.%d'%(sys.version_info[:2])))
+
+_update_path()
+
+
 """ Add Apple's additional packages to sys.path """
 def add_system_python_extras():
     import site, sys
@@ -33,9 +44,26 @@ def _disable_linecache():
 _disable_linecache()
 
 
+import re, sys
+cookie_re = re.compile(b"coding[:=]\s*([-\w.]+)")
+if sys.version_info[0] == 2:
+    default_encoding = 'ascii'
+else:
+    default_encoding = 'utf-8'
+
+def guess_encoding(fp):
+    for i in range(2):
+        ln = fp.readline()
+
+        m = cookie_re.search(ln)
+        if m is not None:
+            return m.group(1).decode('ascii')
+
+    return default_encoding
+
 def _run():
     global __file__
-    import os, sys, site
+    import os, site
     sys.frozen = 'macosx_app'
     base = os.environ['RESOURCEPATH']
 
@@ -44,9 +72,26 @@ def _run():
 
     path = os.path.join(base, script)
     sys.argv[0] = __file__ = path
-    with open(path, 'rU') as fp:
-        source = fp.read() + "\n"
+    if sys.version_info[0] == 2:
+        with open(path, 'rU') as fp:
+            source = fp.read() + "\n"
+    else:
+        with open(path, 'rb') as fp:
+            encoding = guess_encoding(fp)
+
+        with open(path, 'r', encoding=encoding) as fp:
+            source = fp.read() + '\n'
     exec(compile(source, path, 'exec'), globals(), globals())
+
+
+def _setup_ctypes():
+    from ctypes.macholib import dyld
+    import os
+    frameworks = os.path.join(os.environ['RESOURCEPATH'], '..', 'Frameworks')
+    dyld.DEFAULT_FRAMEWORK_FALLBACK.insert(0, frameworks)
+    dyld.DEFAULT_LIBRARY_FALLBACK.insert(0, frameworks)
+
+_setup_ctypes()
 
 
 DEFAULT_SCRIPT='main.py'
