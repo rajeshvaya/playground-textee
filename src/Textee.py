@@ -19,6 +19,7 @@ class Textee:
         self.create_ui(master)
         self.set_bindings(master)
         self.file = None
+        self.find_text = ''
 
     def create_menu(self, master):
         self.menu = Menu(master)
@@ -32,14 +33,29 @@ class Textee:
         filemenu.add_separator()
         filemenu.add_command(label="Exit", command=self.exit)
 
+        editmenu = Menu(self.menu)
+        self.menu.add_cascade(label='Edit', menu=editmenu)
+        editmenu.add_command(label='Copy', command=lambda: event_generate(self.editor, 'Copy'))
+        editmenu.add_command(label='Paste', command=lambda: event_generate(self.editor, 'Paste'))
+        editmenu.add_command(label='Undo', command=lambda: event_generate(self.editor, 'Undo'))
+        editmenu.add_separator()
+        editmenu.add_command(label='Find', command=do_nothing) # need to develop custom find with regex
+        editmenu.add_command(label='Find & Replace', command=do_nothing) # need to test the replace logic in separate playground
+        editmenu.add_separator()
+        editmenu.add_command(label='Check spelling & grammer', command=do_nothing) # need to see how to use system's grammer check.. if not possible remove it.
+
+        formatmenu = Menu(self.menu)
+        self.menu.add_cascade(label='Format', menu=formatmenu)
+        formatmenu.add_command(label='Font', command=do_nothing) # pop-up to select system fonts
+        formatmenu.add_command(label='Toggle wrap', command=self.toggle_wrap)
+        
         viewmenu = Menu(self.menu)
         self.menu.add_cascade(label='View', menu=viewmenu)
         viewmenu.add_command(label='Toggle theme', command=self.toggle_theme)
-        viewmenu.add_command(label='Toggle wrap', command=self.toggle_wrap)
         
         helpmenu = Menu(self.menu)
         self.menu.add_cascade(label="Help", menu=helpmenu)
-        helpmenu.add_command(label="About", command=self.about)
+        helpmenu.add_command(label="About", command=lambda : self.about())
 
     def create_ui(self, master):
         self.editor = ScrolledText(master, width=100, height=50, highlightthickness=0)
@@ -55,6 +71,7 @@ class Textee:
         master.bind_class('Text', '<Control-o>', lambda event: self.open_file())
         master.bind_class('Text', '<Control-n>', lambda event: self.new_file())
         master.bind_class('Text', '<Control-g>', lambda event: self.goto_line())
+        master.bind_class('Text', '<Control-f>', lambda event: self.find())
 
     def new_file(self):
         self.file = None
@@ -105,7 +122,23 @@ class Textee:
         else:
             self.editor.config(wrap='word')
 
-    def about(self, master):
+    def find(self):
+        self.find_text = tkSimpleDialog.askstring("Textee", "Enter text to search", initialvalue=self.find_text)
+        if self.find_text:
+            start_pos = self.editor.search(self.find_text, '1.0', stopindex=END, nocase=True)
+            if(start_pos):
+                end_pos = '%s+%sc' % (start_pos, len(self.find_text))
+                self.editor.tag_add(SEL, start_pos, end_pos)
+                self.editor.mark_set(INSERT, end_pos) # mark the cursor to end of find text to start editing
+                self.editor.see(INSERT) # bing the cursor position in the viewport incase of long text causinng scrollbar
+                self.editor.focus_set() # strangely tkinter doesnt return focus after prompt
+            else:
+                tkMessageBox.showinfo("Textee", "No matches found")
+        else:
+            self.editor.focus_set() # strangely tkinter doesnt return focus after prompt
+            
+
+    def about(self):
         tkMessageBox.showinfo("About", "Textee - A stupid text editor")
 
     def exit(self, master):

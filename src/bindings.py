@@ -12,5 +12,8 @@ def select_all(event):
     event.widget.see(INSERT)
     return "break"
 
+def event_generate(widget, event):
+	widget.event_generate('<<%s>>' % (event))
+
 def print_configs(widget):
 	pprint.pprint(widget.config())
