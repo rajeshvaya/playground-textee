@@ -5,6 +5,7 @@ import Tkinter
 from Tkinter import *
 from ScrolledText import *
 import tkFileDialog, tkMessageBox, tkSimpleDialog
+from TexteeOptions import *
 
 from bindings import *
 from utilities import *
@@ -15,11 +16,13 @@ class Textee:
     def __init__(self, master):
         self.master = master
         self.theme = 'dark' # the startup will always be opposite
+        self.options = TexteeOptions()
         self.create_menu(master)
         self.create_ui(master)
         self.set_bindings(master)
         self.file = None
         self.find_text = ''
+        
 
     def create_menu(self, master):
         self.menu = Menu(master)
@@ -47,7 +50,7 @@ class Textee:
         formatmenu = Menu(self.menu)
         self.menu.add_cascade(label='Format', menu=formatmenu)
         formatmenu.add_command(label='Font', command=do_nothing) # pop-up to select system fonts
-        formatmenu.add_command(label='Toggle wrap', command=self.toggle_wrap)
+        formatmenu.add_checkbutton(label='Wrap', onvalue=True, offvalue=False, variable=self.options.wrap, command=self.toggle_wrap)
         
         viewmenu = Menu(self.menu)
         self.menu.add_cascade(label='View', menu=viewmenu)
@@ -117,7 +120,8 @@ class Textee:
             self.theme = 'light'
 
     def toggle_wrap(self):
-        if self.editor.cget('wrap') != 'none':
+        # self.editor.cget('wrap') # gets the config value
+        if not self.options.wrap.get():
             self.editor.config(wrap='none')
         else:
             self.editor.config(wrap='word')
