@@ -5,8 +5,10 @@ import Tkinter
 from Tkinter import *
 from ScrolledText import *
 import tkFileDialog, tkMessageBox, tkSimpleDialog
-from TexteeOptions import *
+import tkFont
 
+from TexteeOptions import *
+from TexteeFontDialog import *
 from bindings import *
 from utilities import *
 
@@ -22,6 +24,7 @@ class Textee:
         self.set_bindings(master)
         self.file = None
         self.find_text = ''
+        self.font_dialog = ''
         
 
     def create_menu(self, master):
@@ -65,7 +68,7 @@ class Textee:
         self.editor.config(undo=True)
         self.editor.pack(fill=X, padx=0, pady=0)
         self.toggle_theme()
-        print_configs(self.editor)
+        #print_configs(self.editor)
         
 
     def set_bindings(self, master):
@@ -75,6 +78,7 @@ class Textee:
         master.bind_class('Text', '<Control-n>', lambda event: self.new_file())
         master.bind_class('Text', '<Control-g>', lambda event: self.goto_line())
         master.bind_class('Text', '<Control-f>', lambda event: self.find())
+        master.bind_class('Text', '<Control-;>', lambda event: self.select_font())
 
     def new_file(self):
         self.file = None
@@ -141,7 +145,22 @@ class Textee:
         else:
             self.editor.focus_set() # strangely tkinter doesnt return focus after prompt
             
+    def select_font(self):
+        self.font_dialog = TexteeFontDialog(self.master)
+        fs = 12 # default size for any font selected
 
+        if self.font_dialog.selected_font_family:
+            ff = self.font_dialog.selected_font_family
+        
+        if self.font_dialog.selected_font_size:
+            fs = self.font_dialog.selected_font_size
+
+        print ff, fs, " - font properties"
+
+        if ff and fs > 0:
+            self.default_font = tkFont.Font(self.master, family=ff, size=fs)
+            self.editor.config(font=self.default_font)
+        
     def about(self):
         tkMessageBox.showinfo("About", "Textee - A stupid text editor")
 

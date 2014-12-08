@@ -3,18 +3,32 @@ Since there is no dialog for font selection for tkinter, it is good to build a c
 This will be the base for all font manipulations from the Textee editor.
 '''
 import Tkinter
+from Tkinter import *
+import tkSimpleDialog
 import tkFont
 
-class TexteeFontDialog:
-	def __init__(self):
-		self._fonts = list(tkFont.families()) # fetch all the available fonts at the system level
-		self._font.sort()
-		self.selected_font = '' # should be passed from the TopLevel() i.e. the root/master window
-		pass
+class TexteeFontDialog(tkSimpleDialog.Dialog):
+	def body(self, master):
+		# get data 
+		self.fonts = list(tkFont.families())
+		self.fonts.sort()
 
-	def show_dialog():
-		# code to show the selection panel
-		pass
+		# prepare the widgets
+		self.listbox_font_family = Listbox(master)
+		self.entry_font_size = Entry(master)
+		self.lbl_font_family = Label(master, text="Choose font: ")
+		self.lbl_font_size = Label(master, text="Choose font size: ")
 
-	def close_dialog():
+		for font in self.fonts:
+			self.listbox_font_family.insert(END, font)
+
+		# grid the widgets onto the window
+		self.lbl_font_family.grid(row=0)
+		self.lbl_font_size.grid(row=1)
+		self.listbox_font_family.grid(row=0, column=1)
+		self.entry_font_size.grid(row=1, column=1)
+		
+	def apply(self):
+		self.selected_font_family = self.fonts[int(self.listbox_font_family.curselection()[0])]
+		self.selected_font_size = self.entry_font_size.get()
 		pass
