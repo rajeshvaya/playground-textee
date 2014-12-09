@@ -26,7 +26,6 @@ class Textee:
         self.find_text = ''
         self.font_dialog = ''
         
-
     def create_menu(self, master):
         self.menu = Menu(master)
         master.config(menu=self.menu)
@@ -52,7 +51,7 @@ class Textee:
 
         formatmenu = Menu(self.menu)
         self.menu.add_cascade(label='Format', menu=formatmenu)
-        formatmenu.add_command(label='Font', command=do_nothing) # pop-up to select system fonts
+        formatmenu.add_command(label='Font', command=self.select_font) # pop-up to select system fonts
         formatmenu.add_checkbutton(label='Wrap', onvalue=True, offvalue=False, variable=self.options.wrap, command=self.toggle_wrap)
         
         viewmenu = Menu(self.menu)
@@ -66,10 +65,21 @@ class Textee:
     def create_ui(self, master):
         self.editor = ScrolledText(master, width=100, height=50, highlightthickness=0)
         self.editor.config(undo=True)
-        self.editor.pack(fill=X, padx=0, pady=0)
+        self.editor.pack(expand=YES, fill='both', padx=0, pady=0)
         self.toggle_theme()
         #print_configs(self.editor)
         
+        # Create pop-menu for the entire editor.. do some cool stuff with it
+        self.editor.popmenu = Menu(self.master, tearoff=0)
+        # TODO : later need to do smart copy/paste i.e. selected text copy of entire line copy
+        self.editor.popmenu.add_command(label='Copy', command=lambda: event_generate(self.editor, 'Copy'))
+        self.editor.popmenu.add_command(label='Paste', command=lambda: event_generate(self.editor, 'Paste'))
+        # TODO : disable undo when not available, not sure if its possible. Need to check research later
+        self.editor.popmenu.add_command(label='Undo', command=lambda: event_generate(self.editor, 'Undo'))
+        self.editor.popmenu.add_separator()
+        # TODO : 'share' this will be the best feature in the editor, share the file with the future textee sharing api
+        self.editor.popmenu.add_command(label='Share', command=do_nothing)
+
 
     def set_bindings(self, master):
         master.bind_class('Text', '<Control-a>', select_all)
@@ -78,7 +88,11 @@ class Textee:
         master.bind_class('Text', '<Control-n>', lambda event: self.new_file())
         master.bind_class('Text', '<Control-g>', lambda event: self.goto_line())
         master.bind_class('Text', '<Control-f>', lambda event: self.find())
-        master.bind_class('Text', '<Control-;>', lambda event: self.select_font())
+        master.bind_class('Text', '<Control-;>', lambda event: self.show_right_click_menu(event)) # this function is only for temporoy use - for dev purpose only
+        # editor section bindings only
+        self.editor.bind('<Button-2>', self.show_right_click_menu) # for right-click
+        self.editor.bind('<Button-3>', self.show_right_click_menu) # for middle-click (scroll press)
+
 
     def new_file(self):
         self.file = None
@@ -160,6 +174,15 @@ class Textee:
         if ff and fs > 0:
             self.default_font = tkFont.Font(self.master, family=ff, size=fs)
             self.editor.config(font=self.default_font)
+
+    def show_right_click_menu(self, event):
+        print 'going to display popmenu at', event.x_root, event.y_root
+        try:
+            self.editor.popmenu.tk_popup(event.x_root, event.y_root, 0)
+        finally:
+            # TODO: not sure why we need this, pasting it from the documentation. Later check to remove it
+            self.editor.popmenu.grab_release()
+
         
     def about(self):
         tkMessageBox.showinfo("About", "Textee - A stupid text editor")
