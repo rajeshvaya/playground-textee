@@ -1,5 +1,7 @@
 #!/usr/bin/python
 ''' IMPORTS '''
+import os
+import re
 import pprint
 import Tkinter
 from Tkinter import *
@@ -44,10 +46,10 @@ class Textee:
         editmenu.add_command(label='Paste', command=lambda: event_generate(self.editor, 'Paste'))
         editmenu.add_command(label='Undo', command=lambda: event_generate(self.editor, 'Undo'))
         editmenu.add_separator()
-        editmenu.add_command(label='Find', command=do_nothing) # need to develop custom find with regex
+        editmenu.add_command(label='Find', command=self.find) # need to develop custom find with regex
         editmenu.add_command(label='Find & Replace', command=do_nothing) # need to test the replace logic in separate playground
         editmenu.add_separator()
-        editmenu.add_command(label='Check spelling & grammer', command=do_nothing) # need to see how to use system's grammer check.. if not possible remove it.
+        editmenu.add_command(label='Check spelling', command=self.spell_check) # need to see how to use system's grammer check.. if not possible remove it.
 
         formatmenu = Menu(self.menu)
         self.menu.add_cascade(label='Format', menu=formatmenu)
@@ -88,7 +90,7 @@ class Textee:
         master.bind_class('Text', '<Control-n>', lambda event: self.new_file())
         master.bind_class('Text', '<Control-g>', lambda event: self.goto_line())
         master.bind_class('Text', '<Control-f>', lambda event: self.find())
-        master.bind_class('Text', '<Control-;>', lambda event: self.show_right_click_menu(event)) # this function is only for temporoy use - for dev purpose only
+        master.bind_class('Text', '<Control-;>', lambda event: self.spell_check()) # this function is only for temporoy use - for dev purpose only
         # editor section bindings only
         self.editor.bind('<Button-2>', self.show_right_click_menu) # for right-click
         self.editor.bind('<Button-3>', self.show_right_click_menu) # for middle-click (scroll press)
@@ -131,10 +133,14 @@ class Textee:
         if self.theme == 'light':
             self.editor.config(bg='black', fg='white', insertbackground='white',highlightcolor='black')
             self.editor.frame.config(bg='black')
+            # theme for misspelled words
+            self.editor.tag_configure("misspelled", foreground="red", underline=True)
             self.theme = 'dark'
         else:
             self.editor.config(bg='white', fg='black', insertbackground='black',highlightcolor='white')
             self.editor.frame.config(bg='white')
+            # theme for misspelled words
+            self.editor.tag_configure("misspelled", foreground="red", underline=True)
             self.theme = 'light'
 
     def toggle_wrap(self):
@@ -183,7 +189,30 @@ class Textee:
             # TODO: not sure why we need this, pasting it from the documentation. Later check to remove it
             self.editor.popmenu.grab_release()
 
-        
+    def spell_check(self):
+        # check if the dictonary exists in the system (only mac and linux have it at this location)
+        # TODO: to check on windows how to do?
+        print "inside the spell check"
+        if not os.path.exists('/usr/share/dict/words'):
+            return
+
+        with open('/usr/share/dict/words', 'r') as words_file:
+            system_words = words_file.read().split('\n') 
+            current_file_lines = self.editor.get('1.0', END+'-1c').split('\n') 
+
+            for lineno, current_line in enumerate(current_file_lines):
+                current_line_words = re.split('\W', current_line)
+                columnposition = 0 # this is to ignore the white space with which we split above, the marking of the invalid word should be be without the space
+                for word in current_line_words:
+                    start_index = '%s.%s' % (lineno+1, columnposition)
+                    end_index = '%s+%dc' % (start_index, len(word))
+                    if word in system_words:
+                        self.editor.tag_remove('misspelled', start_index, end_index)
+                    else:
+                        self.editor.tag_add('misspelled', start_index, end_index)
+                    columnposition += len(word)+1 # take into account the space
+                    
+
     def about(self):
         tkMessageBox.showinfo("About", "Textee - A stupid text editor")
 
