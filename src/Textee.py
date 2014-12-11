@@ -37,6 +37,7 @@ class Textee:
         filemenu.add_command(label="New", command=self.new_file)
         filemenu.add_command(label="Open...", command=self.open_file)
         filemenu.add_command(label="Save", command=self.save_file)
+        filemenu.add_command(label="Save As", command=lambda: self.save_file(save_as=True))
         filemenu.add_separator()
         filemenu.add_command(label="Exit", command=self.exit)
 
@@ -82,6 +83,10 @@ class Textee:
         # TODO : 'share' this will be the best feature in the editor, share the file with the future textee sharing api
         self.editor.popmenu.add_command(label='Share', command=do_nothing)
 
+        # add status bar by default, it can be hidden from menu
+        
+        
+
 
     def set_bindings(self, master):
         master.bind_class('Text', '<Control-a>', select_all)
@@ -109,18 +114,23 @@ class Textee:
             self.editor.insert('1.0',contents)
             infile.close()
 
-    def save_file(self):
+    def save_file(self, save_as=False):
         data = self.editor.get('1.0', END+'-1c')
+        save_as_file = None
 
+        # if saving the file by creation
+        if self.file == None or save_as == True:
+            save_as_file = tkFileDialog.asksaveasfilename() # attempt to select the filename, the user can select cancel so check agian below
+
+        # the above could result in None if the user cancels the dialog
+        if save_as_file:
+            self.file = save_as_file
+
+        # final check, as both the above could result in None
         if self.file != None:
             outfile = open(self.file, 'w')
             outfile.write(data)
             outfile.close()
-        else:
-            self.file = tkFileDialog.asksaveasfile(mode='w')
-            if self.file != None:
-                self.file.write(data)
-                self.file.close()
 
     def goto_line(self):
         lineno = tkSimpleDialog.askinteger('Textee', 'Goto line:')
@@ -212,7 +222,6 @@ class Textee:
                         self.editor.tag_add('misspelled', start_index, end_index)
                     columnposition += len(word)+1 # take into account the space
                     
-
     def about(self):
         tkMessageBox.showinfo("About", "Textee - A stupid text editor")
 
