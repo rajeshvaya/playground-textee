@@ -11,6 +11,7 @@ import tkFont
 
 from TexteeOptions import *
 from TexteeFontDialog import *
+from TexteeStatusBar import *
 from bindings import *
 from utilities import *
 
@@ -21,6 +22,7 @@ class Textee:
         self.master = master
         self.theme = 'dark' # the startup will always be opposite
         self.options = TexteeOptions()
+        self.status_bar = TexteeStatusBar(master)
         self.create_menu(master)
         self.create_ui(master)
         self.set_bindings(master)
@@ -47,6 +49,7 @@ class Textee:
         editmenu.add_command(label='Paste', command=lambda: event_generate(self.editor, 'Paste'))
         editmenu.add_command(label='Undo', command=lambda: event_generate(self.editor, 'Undo'))
         editmenu.add_separator()
+        editmenu.add_command(label='Goto', command=self.goto_line) # need to develop custom find with regex
         editmenu.add_command(label='Find', command=self.find) # need to develop custom find with regex
         editmenu.add_command(label='Find & Replace', command=do_nothing) # need to test the replace logic in separate playground
         editmenu.add_separator()
@@ -59,6 +62,7 @@ class Textee:
         
         viewmenu = Menu(self.menu)
         self.menu.add_cascade(label='View', menu=viewmenu)
+        viewmenu.add_checkbutton(label='Status bar', onvalue=True, offvalue=False, variable=self.options.status_bar, command=lambda: self.status_bar.display(self.options.status_bar.get()))
         viewmenu.add_command(label='Toggle theme', command=self.toggle_theme)
         
         helpmenu = Menu(self.menu)
@@ -84,10 +88,8 @@ class Textee:
         self.editor.popmenu.add_command(label='Share', command=do_nothing)
 
         # add status bar by default, it can be hidden from menu
+        self.status_bar.update_status('Hi there')
         
-        
-
-
     def set_bindings(self, master):
         master.bind_class('Text', '<Control-a>', select_all)
         master.bind_class('Text', '<Control-s>', lambda event: self.save_file())
@@ -99,6 +101,8 @@ class Textee:
         # editor section bindings only
         self.editor.bind('<Button-2>', self.show_right_click_menu) # for right-click
         self.editor.bind('<Button-3>', self.show_right_click_menu) # for middle-click (scroll press)
+
+        self.display_current_position()
 
 
     def new_file(self):
@@ -221,7 +225,12 @@ class Textee:
                     else:
                         self.editor.tag_add('misspelled', start_index, end_index)
                     columnposition += len(word)+1 # take into account the space
-                    
+     
+    def display_current_position(self):
+        cursor_position =  self.editor.index("insert").replace('.', ',')
+        self.status_bar.update_status(cursor_position)
+        self.master.after(self.status_bar.update_interval, self.display_current_position)
+
     def about(self):
         tkMessageBox.showinfo("About", "Textee - A stupid text editor")
 

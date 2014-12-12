@@ -7,5 +7,6 @@ class TexteeOptions:
 		self.theme = 'dark'
 		self.font = 'default'
 		self.font_size = '12'
+		self.status_bar = BooleanVar(value=True)
 		self.spell_check = BooleanVar(value=False)
 
