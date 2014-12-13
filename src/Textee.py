@@ -11,6 +11,7 @@ import tkFont
 
 from TexteeOptions import *
 from TexteeFontDialog import *
+from TexteeFindAndReplaceDialog import *
 from TexteeStatusBar import *
 from bindings import *
 from utilities import *
@@ -28,7 +29,8 @@ class Textee:
         self.set_bindings(master)
         self.file = None
         self.find_text = ''
-        self.font_dialog = ''
+        self.font_dialog = None
+        self.find_and_replace_dialog = None
         
     def create_menu(self, master):
         self.menu = Menu(master)
@@ -51,7 +53,7 @@ class Textee:
         editmenu.add_separator()
         editmenu.add_command(label='Goto', command=self.goto_line) # need to develop custom find with regex
         editmenu.add_command(label='Find', command=self.find) # need to develop custom find with regex
-        editmenu.add_command(label='Find & Replace', command=do_nothing) # need to test the replace logic in separate playground
+        editmenu.add_command(label='Find & Replace', command=self.find_and_replace) # need to test the replace logic in separate playground
         editmenu.add_separator()
         editmenu.add_command(label='Check spelling', command=self.spell_check) # need to see how to use system's grammer check.. if not possible remove it.
 
@@ -183,6 +185,10 @@ class Textee:
                 tkMessageBox.showinfo("Textee", "No morw matches found")
         else:
             self.editor.focus_set() # strangely tkinter doesnt return focus after prompt
+
+    def find_and_replace(self):
+        #show the custom dialog
+        self.find_and_replace_dialog = TexteeFindAndReplaceDialog(self.master)
             
     def select_font(self):
         self.font_dialog = TexteeFontDialog(self.master)

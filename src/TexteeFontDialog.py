@@ -10,6 +10,7 @@ import tkFont
 class TexteeFontDialog(tkSimpleDialog.Dialog):
 	def body(self, master):
 		# get data 
+		self.resizable(0,0)
 		self.fonts = list(tkFont.families())
 		self.fonts.sort()
 
