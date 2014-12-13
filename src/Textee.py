@@ -165,9 +165,14 @@ class Textee:
             self.editor.config(wrap='word')
 
     def find(self):
-        self.find_text = tkSimpleDialog.askstring("Textee", "Enter text to search", initialvalue=self.find_text)
-        if self.find_text:
-            start_pos = self.editor.search(self.find_text, '1.0', stopindex=END, nocase=True)
+        find_text = tkSimpleDialog.askstring("Textee", "Enter text to search", initialvalue=self.find_text)
+        if find_text:
+            if find_text == self.find_text:
+                start_pos = self.editor.search(find_text, self.editor.index('insert'), stopindex=END, nocase=True)
+            else:
+                start_pos = self.editor.search(find_text, '1.0', stopindex=END, nocase=True)
+                
+            self.find_text = find_text
             if(start_pos):
                 end_pos = '%s+%sc' % (start_pos, len(self.find_text))
                 self.editor.tag_add(SEL, start_pos, end_pos)
@@ -175,7 +180,7 @@ class Textee:
                 self.editor.see(INSERT) # bing the cursor position in the viewport incase of long text causinng scrollbar
                 self.editor.focus_set() # strangely tkinter doesnt return focus after prompt
             else:
-                tkMessageBox.showinfo("Textee", "No matches found")
+                tkMessageBox.showinfo("Textee", "No morw matches found")
         else:
             self.editor.focus_set() # strangely tkinter doesnt return focus after prompt
             
