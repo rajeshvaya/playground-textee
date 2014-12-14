@@ -99,7 +99,7 @@ class Textee:
         master.bind_class('Text', '<Control-n>', lambda event: self.new_file())
         master.bind_class('Text', '<Control-g>', lambda event: self.goto_line())
         master.bind_class('Text', '<Control-f>', lambda event: self.find())
-        master.bind_class('Text', '<Control-;>', lambda event: self.spell_check()) # this function is only for temporoy use - for dev purpose only
+        master.bind_class('Text', '<Control-;>', lambda event: self.find_and_replace()) # this function is only for temporoy use - for dev purpose only
         # editor section bindings only
         self.editor.bind('<Button-2>', self.show_right_click_menu) # for right-click
         self.editor.bind('<Button-3>', self.show_right_click_menu) # for middle-click (scroll press)
@@ -189,7 +189,18 @@ class Textee:
     def find_and_replace(self):
         #show the custom dialog
         self.find_and_replace_dialog = TexteeFindAndReplaceDialog(self.master)
-            
+        if self.find_and_replace_dialog.find_text:
+            start_pos = self.editor.search(self.find_and_replace_dialog.find_text, '1.0', stopindex=END, nocase=True)
+            # lazy recursive replace for all the matched elements, no need to parse whole dataset again and again
+            while start_pos:
+                self.editor.delete(start_pos, '%s+%sc' % (start_pos, len(self.find_and_replace_dialog.find_text)))
+                self.editor.insert(start_pos, self.find_and_replace_dialog.replace_with)
+                # break after first replace if replace all flag is off
+                if not self.find_and_replace_dialog.replace_all:
+                    break
+                start_pos = self.editor.search(self.find_and_replace_dialog.find_text, '%s+%sc' % (start_pos, len(self.find_and_replace_dialog.replace_with)), stopindex=END, nocase=True)
+
+
     def select_font(self):
         self.font_dialog = TexteeFontDialog(self.master)
         fs = 12 # default size for any font selected
