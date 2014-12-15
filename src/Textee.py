@@ -1,6 +1,7 @@
 #!/usr/bin/python
 ''' IMPORTS '''
 import os
+import subprocess
 import re
 import pprint
 import Tkinter
@@ -42,6 +43,8 @@ class Textee:
         filemenu.add_command(label="Open...", command=self.open_file)
         filemenu.add_command(label="Save", command=self.save_file)
         filemenu.add_command(label="Save As", command=lambda: self.save_file(save_as=True))
+        filemenu.add_separator()
+        filemenu.add_command(label="Print", command=self.printer)
         filemenu.add_separator()
         filemenu.add_command(label="Exit", command=self.exit)
 
@@ -99,11 +102,14 @@ class Textee:
         master.bind_class('Text', '<Control-n>', lambda event: self.new_file())
         master.bind_class('Text', '<Control-g>', lambda event: self.goto_line())
         master.bind_class('Text', '<Control-f>', lambda event: self.find())
+        master.bind_class('Text', '<Control-p>', lambda event: self.printer())
         master.bind_class('Text', '<Control-;>', lambda event: self.find_and_replace()) # this function is only for temporoy use - for dev purpose only
+
         # editor section bindings only
         self.editor.bind('<Button-2>', self.show_right_click_menu) # for right-click
         self.editor.bind('<Button-3>', self.show_right_click_menu) # for middle-click (scroll press)
 
+        #display the current cursor position
         self.display_current_position()
 
 
@@ -252,6 +258,14 @@ class Textee:
         cursor_position =  self.editor.index("insert").replace('.', ',')
         self.status_bar.update_status(cursor_position)
         self.master.after(self.status_bar.update_interval, self.display_current_position)
+
+    def printer(self):
+        if not os.path.exists('/usr/bin/lpr'):
+            tkMessageBox.showerror('Printing is not supported with your operating system')
+            return
+        lpr = subprocess.Popen('/usr/bin/lpr', stdin=subprocess.PIPE)
+        text = self.editor.get('1.0', END+'-1c')
+        
 
     def about(self):
         tkMessageBox.showinfo("About", "Textee - A stupid text editor")
