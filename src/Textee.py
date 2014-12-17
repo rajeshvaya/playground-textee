@@ -32,6 +32,7 @@ class Textee:
         self.find_text = ''
         self.font_dialog = None
         self.find_and_replace_dialog = None
+        self.windows = []
         
     def create_menu(self, master):
         self.menu = Menu(master)
@@ -43,6 +44,8 @@ class Textee:
         filemenu.add_command(label="Open...", command=self.open_file)
         filemenu.add_command(label="Save", command=self.save_file)
         filemenu.add_command(label="Save As", command=lambda: self.save_file(save_as=True))
+        filemenu.add_separator()
+        filemenu.add_command(label="New window", command=self.new_window)
         filemenu.add_separator()
         filemenu.add_command(label="Print", command=self.printer)
         filemenu.add_separator()
@@ -265,6 +268,16 @@ class Textee:
             return
         lpr = subprocess.Popen('/usr/bin/lpr', stdin=subprocess.PIPE)
         text = self.editor.get('1.0', END+'-1c')
+        lpr.stdin.write(text)
+        lpr.stdin.close()
+
+    def new_window(self):
+        #allow multiple windows to be opened
+        root = Tkinter.Tk(className=" Textee")
+        root.title("Textee - A Stupid Text Editor")
+        app = Textee(root)
+        self.windows.append(app)
+        root.mainloop()
         
 
     def about(self):
